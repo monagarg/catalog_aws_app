@@ -1,0 +1,56 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="row">
+		<div class="col-md-10"></div>
+		<div class="col-md-2 text-right">
+			{% if heading == "All Listings" %}
+				<a href="{{url_for('myListings')}}">My Listings </a>
+			{% endif %}
+		</div>
+	</div>
+
+	<div class="row divider blue">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row banner main">
+		<div class="col-md-1"></div>
+		<div class="col-md-8 padding-none">
+			<h1>{{heading}}</h1>
+		</div>
+		{% if heading == "My Listings" %}
+			<div class="col-md-2 text-right padding-top">
+				<a href="{{url_for('newListing' )}}">
+					<button class="btn btn-default" id="new-menu-item">
+						<span aria-hidden="true"></span>Add New Listing
+					</button>
+				</a>
+			</div>
+		{% endif %}
+	</div>
+
+	{% for product in products %}
+		<a href = "{{url_for('productDetails', product_id = product.product_id)}}">
+			<div class="row">
+				<div class="col-md-1"></div>
+					<div class="col-md-10 restaurant-list">
+						<h2>{{product.name}}</h2>
+						<h3>{{product.description}}</h3>
+						<h3>Deposit: ${{product.deposit}}</h3>
+						<h3>Days available to rent: {{product.max_days}} days</h3>
+						{% if heading == "My Listings" %}
+							<a href='{{url_for('editListing', product_id = product.product_id ) }}'>Edit</a> | 
+							<a href='{{url_for('deleteProduct', product_id = product.product_id ) }}'>Delete</a>
+							{% if product.is_available == False %}
+								<a href='{{url_for('enableProduct', product_id = product.product_id ) }}'> | Available to list again?</a>
+							{% endif %}
+						{% endif %}
+						{% if heading == "All Listings" %}
+							<a href='{{url_for('rentProduct', product_id = product.product_id ) }}'>Rent</a>
+						{% endif %}
+					</div>
+				<div class="col-md-1"></div>
+			</div>
+		</a>
+	{% endfor %}
+{% endblock %}

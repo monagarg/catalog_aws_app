@@ -1,0 +1,29 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+	<div class="row divider green">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row banner menu">
+		<div class="col-md-11 col-md-offset-1 padding-none">
+			<h1>{{product.name}}
+			<figure class="creator">
+				<img src="{{ url_for('static', filename='blank_user.gif') }}">
+				<figcaption>{{user.name}}</figcaption>
+			</figure>
+			</h1>
+
+		</div>
+	</div>
+
+	<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-3">
+			<h2>{{product.description}}</h2>
+			<h2>{{product.identifier}}: {{product.identifier_value}}</h2>
+			<h3>Deposit: ${{listing.deposit}}</h3>
+			<h3>Days available to rent: {{listing.max_days}} days</h3>
+
+	</div>
+{% endblock %}
