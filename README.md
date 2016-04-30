@@ -24,10 +24,12 @@ Summary of Configurations Changes
  #  connect to the server
  ssh -i ~/.ssh/udacity_key.rsa root@52.37.1.25
 
+
  # add a new user 
  sudo adduser grader
 
  # provide password and complete the request
+
  <password>
 
  # copy the public key from the root to the grader user
