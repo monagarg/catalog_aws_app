@@ -1,6 +1,12 @@
-Project: Linux Server Configuration - Mona Garg 
-Version: 1.0 04/30/2016
-================================
+ 
+Project: Linux Server Configuration - Mona Garg
+================================================
+
+
+Version
+--------
+1.0 04/30/2016
+
 
 Overview
 ------------------
@@ -14,8 +20,8 @@ Please refer to requirements.txt
 
 AWS Server Details
 ------------------------
-IP Address: 52.37.1.25
-SSH Port: 2200
+IP Address: 52.37.1.25 <br>
+SSH Port: 2200 <br>
 Complete URL: http://52.37.1.25/ and <br>
 http://ec2-52-37-1-25.us-west-2.compute.amazonaws.com/
 
