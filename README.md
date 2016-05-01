@@ -22,7 +22,7 @@ Complete URL: http://52.37.1.25/ and http://ec2-52-37-1-25.us-west-2.compute.ama
 Summary of Configurations Changes 
 ----------------------------------
 
-/#  connect to the server
+\#  connect to the server
 ssh -i ~/.ssh/udacity_key.rsa root@52.37.1.25
 
 
