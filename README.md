@@ -4,19 +4,20 @@ Version: 1.0 04/30/2016
 
 Overview
 ------------------
-The Linux Server Configuration project requires to configure the assigned aws server and to deploy the web application that was development as part of the third project (Item Catalog) 
-
+The Linux Server Configuration project requires to configure an aws server and to deploy the web application that was developed as part of the Item Catalog project.
+ 
 
 Required Libraries and Dependencies
 -----------------------------------
-Please refer to requirements.tx
+Please refer to requirements.txt
 
 
 AWS Server Details
 ------------------------
 IP Address: 52.37.1.25
 SSH Port: 2200
-Complete URL: http://52.37.1.25/ and http://ec2-52-37-1-25.us-west-2.compute.amazonaws.com/
+Complete URL: http://52.37.1.25/ and <br>
+http://ec2-52-37-1-25.us-west-2.compute.amazonaws.com/
 
 
 Summary of Configurations Changes 
